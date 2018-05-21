@@ -26,4 +26,15 @@ public class CustomerTest {
     public void hasMoney(){
         assertEquals(10, customer.getMoney());
     }
+
+    @Test
+    public void canPayFayre(){
+
+        assertEquals(5, customer.income(5));
+    }
+
+    @Test
+    public void allowedOnRide(){
+        assertEquals(true, customer.rideHeight(180));
+    }
 }

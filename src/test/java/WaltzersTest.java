@@ -9,7 +9,7 @@ public class WaltzersTest {
 
     @Before
     public void before() {
-        waltzers = new Waltzers(6, 8, 120);
+        waltzers = new Waltzers(6, 8, 120, 100);
     }
 
     @Test
@@ -25,6 +25,17 @@ public class WaltzersTest {
     @Test
     public void canGetMinimumHeight(){
         assertEquals(120, waltzers.getMinimumHeight());
+    }
+
+    @Test
+    public void canGetIncome(){
+
+        assertEquals(106, waltzers.income(6));
+    }
+
+    @Test
+    public void allowedOnRide(){
+        assertEquals(true, waltzers.rideHeight(160));
     }
 }
 

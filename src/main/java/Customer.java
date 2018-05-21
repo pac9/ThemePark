@@ -1,4 +1,4 @@
-public class Customer {
+public class Customer implements IPayment, IHeight{
 
     private int age;
     private int height;
@@ -22,5 +22,14 @@ public class Customer {
         return money;
     }
 
+    public int income(int price) {
+        return money -= price;
+    }
+
+    public boolean rideHeight(int height){
+            if (height < getHeight());{
+                return true;
+            }
+    }
 
 }

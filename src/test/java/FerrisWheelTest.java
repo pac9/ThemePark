@@ -9,7 +9,7 @@ public class FerrisWheelTest {
 
     @Before
     public void before() {
-        ferrisWheel = new FerrisWheel(8, 10, 130);
+        ferrisWheel = new FerrisWheel(8, 10, 130, 16);
     }
 
     @Test
@@ -25,6 +25,17 @@ public class FerrisWheelTest {
     @Test
     public void canGetMinimumHeight(){
         assertEquals(130, ferrisWheel.getMinimumHeight());
+    }
+
+    @Test
+    public void canGetIncome(){
+
+        assertEquals(24, ferrisWheel.income(8));
+    }
+
+    @Test
+    public void allowedOnRide(){
+        assertEquals(true, ferrisWheel.rideHeight(160));
     }
 }
 
